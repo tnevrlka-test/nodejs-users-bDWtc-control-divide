@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: simple-nodejs-app-0ig1
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: simple-nodejs-app-0ig1
+    app.kubernetes.io/part-of: nodejs-users
+  name: simple-nodejs-app-0ig1
+spec:
+  ports:
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: simple-nodejs-app-0ig1
+status:
+  loadBalancer: {}
